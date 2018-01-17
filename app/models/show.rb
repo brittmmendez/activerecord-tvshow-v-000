@@ -7,8 +7,8 @@ class Show < ActiveRecord::Base
 
   def self.most_popular_show
     #return the show with the highest rating
-    self.highest_rating.name
     binding.pry
+    self.highest_rating.name
   end
 
   def lowest_rating
