@@ -2,13 +2,11 @@ class Show < ActiveRecord::Base
 
   def self.highest_rating
   #return the highest value in the ratings column
-  Show.maximum('rating')
+  highest_rating
   end
 
   def self.most_popular_show
-    #return the show with the highest rating
-    binding.pry
-    self.highest_rating.name
+    Show.find_by(rating: highest_rating).name
   end
 
   def lowest_rating
